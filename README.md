@@ -9,3 +9,22 @@ A fully functional implementation of a Wikipedia-like online encyclopedia using 
 - HTML
 - CSS
 
+## How to Run
+1. Clone this repo
+```sh
+git clone https://github.com/khuzaima-a/encyclopedia-django.git
+```
+2. Move to Project Directory
+```sh
+cd encyclopedia-django
+```
+3. Install Django in your system
+```sh
+pip install Django
+```
+4. Run the Project
+```sh
+py manage.py runserver
+```
+
+#### THANK YOU!!!
