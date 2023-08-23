@@ -1,0 +1,35 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {% if edit%}    
+        Edit {{ entryTitle}}
+    {% else %}
+        New Entry
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <h1 style="font-family:Georgia">
+        {% if edit%}
+            {{ entryTitle }}
+        {% else %}
+            Create New Entry
+        {% endif %}
+    </h1>
+
+    <form action="{% url 'new_entry' %}" method="POST">
+    	{% csrf_token %}
+        <div class="form-group">
+        	{{ form  }}
+        </div>
+        <button type="submit" class="btn btn-primary">
+           {% if edit%}
+                Save Changes
+            {% else %}
+                Save
+            {% endif %}
+         </button>
+     </form>
+	
+
+{% endblock %}

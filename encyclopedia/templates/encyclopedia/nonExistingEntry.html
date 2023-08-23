@@ -1,0 +1,13 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ entryTitle }}
+{% endblock %}
+
+{% block body%}
+    <div style="line-height:50pt;">
+   <i> <h1 style="font-family:Georgia">{{ entryTitle }}???</h1></i>
+   <h4>Looks new to me......</h4>
+   <p>Click <a href="{% url 'new_entry' %}">Here</a> to Create This Entry</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+   Existing Entry
+{% endblock %}
+
+{% block body %}
+<h1 style="font-family:Georgia">{{ title }}</h1>
+<div class="alert alert-danger" role="alert">
+    Sorry! This Entry Already Exists
+</div>
+
+<div class="alert alert-info" role="alert">
+  To open this entry <a href="{% url 'entry' title %}">Click Here</a>
+</div>
+
+<div class="alert alert-info" role="alert">
+  To edit this entry <a href="{% url 'edit' title %}">Click Here</a>
+</div>
+
+<div class="alert alert-secondary" role="alert">
+    Return to <a href="{% url 'new_entry' %}">Previous Page</a>
+  </div>
+{% endblock%}
